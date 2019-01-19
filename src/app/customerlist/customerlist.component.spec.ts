@@ -1,8 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
+import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatPaginatorModule,
+  MatSortModule,
+  MatTableModule,
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule,
+  MatGridListModule,
+  MatCardModule,
+  MatMenuModule
+} from '@angular/material';
 
 import { CustomerlistComponent } from './customerlist.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 describe('CustomerlistComponent', () => {
   let component: CustomerlistComponent;
@@ -13,9 +26,19 @@ describe('CustomerlistComponent', () => {
       declarations: [ CustomerlistComponent ],
       imports: [
         NoopAnimationsModule,
-        MatPaginatorModule,
-        MatSortModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatGridListModule,
+        MatCardModule,
+        MatMenuModule,
         MatTableModule,
+        MatPaginatorModule,
+        MatSortModule
       ]
     }).compileComponents();
   }));

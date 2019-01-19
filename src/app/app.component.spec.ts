@@ -4,9 +4,18 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule,
-   MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule,
-   MatPaginatorModule, MatSortModule } from '@angular/material';
+import {
+          MatToolbarModule,
+          MatButtonModule,
+          MatSidenavModule,
+          MatIconModule,
+          MatListModule,
+          MatGridListModule,
+          MatCardModule,
+          MatMenuModule,
+          MatTableModule,
+          MatPaginatorModule,
+          MatSortModule } from '@angular/material';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -45,10 +54,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular-routing');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render an app-nav in a div', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to angular-routing!');
+    expect(compiled.querySelector('div > app-nav')).toBeDefined();
   });
 });
